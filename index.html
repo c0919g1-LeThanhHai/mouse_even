@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="ball.png" alt="ball" id="ball" width="300px" height="auto">
+<p>Press the button below to move the ball to right</p>
+<button type="button" onclick="moveRight()">Click me!</button>
+<script>
+    let ball = document.getElementById("ball");
+
+    function init() {
+        ball.style.position = "relative";
+        ball.style.top = "0px";
+        ball.style.left = "0px";
+    }
+    function moveRight() {
+        ball.style.left = parseInt(ball.style.left) + 15 +"px";
+    }
+    window.onload = init();
+</script>
+</body>
+</html>
